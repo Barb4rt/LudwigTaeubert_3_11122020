@@ -1,0 +1,147 @@
+@mixin btn {
+    cursor: pointer;
+    height: 3.125rem;
+    width: 13.6rem;
+    background: $btn-gradient;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 0.9em;
+    color: $colour-white;
+    font-family: $font-btn;
+    box-shadow: $btn-shadow;
+    outline: none;
+    &:hover {
+        background: $btn-lighten-gradient;
+        box-shadow: $btn-hover-shadow;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@mixin function-step {
+    height: 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: $colour-ligthgrey;
+    border-radius: 1rem;
+    box-shadow: $function_shadow;
+    margin-bottom: 1.5rem;
+    & span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -0.8rem;
+        background-color: $colour-primary;
+        color: $colour-white;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1rem;
+    }
+    & i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        color: darkness-shift($colour-ligthgrey);
+    }
+    &:nth-child(3) {
+        margin: 0;
+        background-color: lighten($color: #9356dc, $amount: 35);
+        & i {
+            color: $colour-primary;
+        }
+    }
+}
+
+@mixin img-ratio {
+    width: $screen-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@mixin prev__card {
+    width: 100%;
+    height: 15.65rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    box-shadow: 0.1em 0.1em 0.8em 0.2em rgba(0, 0, 0, 0.2);
+    &__imgbox {
+        height: 173px;
+    }
+    &__new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 99;
+        right: 0.7rem;
+        top: 0.7rem;
+        height: 1.8rem;
+        width: 5rem;
+        background-color: $colour-third;
+        color: darkness-shift($colour-third);
+    }
+    &__caption {
+        height: 76px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 $caption-padding--right 0 $caption-padding--letf;
+        color: $colour-black;
+        &--left {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: column;
+            & p {
+                margin: 0;
+            }
+        }
+        &--right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            .light {
+                position: absolute;
+                z-index: 1;
+                transition: opacity;
+                background: linear-gradient(205deg, #9356DC, #FF79DA 75%);
+                color: black;
+                background-clip: text;
+                &:hover {
+                    opacity: 0;
+                }
+            }
+            .full {
+                opacity: 0;
+                &::before {
+                    background: linear-gradient(205deg, #9356DC, #FF79DA 75%);
+                    color: transparent;
+                    background-clip: text;
+                }
+            }
+             :hover+.full {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@mixin divider-green {
+    background-color: $colour-third;
+    height: 0.18rem;
+    width: 2.5rem;
+    display: flex;
+}

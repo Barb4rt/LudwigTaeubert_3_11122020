@@ -1,0 +1,121 @@
+    .load-spin {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 0.5rem solid $colour-ligthgrey;
+        border-top-color: $colour-third;
+        -webkit-animation: 1.5s spin linear infinite;
+        animation: 1.5s spin linear infinite;
+    }
+    
+    .localisation {
+        height: 3.25rem;
+        background-color: $colour-ligthgrey;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: darkness-shift($colour-ligthgrey);
+        font-size: 0.9em;
+        font-family: 'Roboto', sans-serif;
+        &__tag {
+            display: flex;
+            margin: auto;
+            & i {
+                padding-right: 1.2rem;
+            }
+            & p {
+                margin: 0;
+            }
+        }
+    }
+    
+    .flow {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column;
+        padding-right: $layout-margin;
+        padding-left: $layout-margin;
+        box-sizing: border-box;
+    }
+    
+    .explore {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: lighten($color: #f6f6f6, $amount: 2);
+        padding-bottom: 3.375rem;
+        & h1 {
+            width: 50%;
+            font-size: 1.1em;
+            margin: 0;
+            margin-top: 2.5rem;
+        }
+        & p {
+            font-size: 0.8em;
+            width: 75%;
+            margin: 0;
+            margin-top: 1rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+    
+    .function {
+        padding-bottom: 4rem;
+        & h3 {
+            margin: 3.25rem 0 1.9rem 0;
+        }
+        &__list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            &__items {
+                @include function-step;
+            }
+        }
+    }
+    
+    .restaurant {
+        width: 100%;
+        height: 76.5rem;
+        background-color: $colour-ligthgrey;
+        padding-bottom: 3.8rem;
+        & h3 {
+            margin-top: 3.5rem;
+            width: 100%;
+            @media screen and (min-width: 668px)and (max-width: 1025px) {
+                margin-top: $layout-margin;
+            }
+        }
+        @media screen and (min-width:668px)and (max-width:1025px) {
+            max-height: 45rem;
+            display: flex;
+            flex-flow: row wrap;
+            padding-bottom: $layout-margin;
+            justify-content: space-between;
+        }
+        @media screen and (min-width:1025px) {
+            max-height: 45rem;
+            display: flex;
+            flex-flow: row wrap;
+            padding-bottom: $layout-margin;
+            justify-content: space-between;
+        }
+        &__item {
+            @include prev__card();
+            @media screen and (min-width: 668px)and (max-width: 1025px) {
+                width: 45%;
+            }
+            @media screen and (min-width: 1025px) {
+                width: 49%;
+            }
+        }
+        &__item__imgbox {
+            @include img-ratio();
+        }
+    }

@@ -1,0 +1,17 @@
+@function lightness-shift($colour-third) {
+    @if ( lightness($colour-third) < 70%) {
+        @return lighten($colour-third, 10%);
+    }
+    @else {
+        @return darken($colour-third, 0%);
+    }
+}
+
+@function darkness-shift($colour-ligthgrey) {
+    @if ( lightness($colour-ligthgrey) < 25%) {
+        @return lighten($colour-third, 10%);
+    }
+    @else {
+        @return darken($colour-ligthgrey, 60%);
+    }
+}
