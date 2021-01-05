@@ -3,18 +3,19 @@
         height: 5rem;
         border-radius: 50%;
         background-color: transparent;
-        border: 0.5rem solid $colour-ligthgrey;
+        border: 0.5rem solid darken($color: #f6f6f6, $amount: 3);
         border-top-color: $colour-third;
-        -webkit-animation: 1.5s spin linear infinite;
         animation: 1.5s spin linear infinite;
     }
     
     .localisation {
+        @include center;
         height: 3.25rem;
         background-color: $colour-ligthgrey;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
+        margin: auto;
         color: darkness-shift($colour-ligthgrey);
         font-size: 0.9em;
         font-family: 'Roboto', sans-serif;
@@ -37,9 +38,11 @@
         padding-right: $layout-margin;
         padding-left: $layout-margin;
         box-sizing: border-box;
+        width: 100%
     }
     
     .explore {
+        @include center;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,14 +50,15 @@
         background-color: lighten($color: #f6f6f6, $amount: 2);
         padding-bottom: 3.375rem;
         & h1 {
-            width: 50%;
-            font-size: 1.1em;
+            width: 75%;
+            font-size: 1.5em;
             margin: 0;
             margin-top: 2.5rem;
         }
         & p {
-            font-size: 0.8em;
-            width: 75%;
+            font-size: 1em;
+            font-weight: lighter;
+            width: 90%;
             margin: 0;
             margin-top: 1rem;
             margin-bottom: 1.8rem;
@@ -62,9 +66,12 @@
     }
     
     .function {
+        @include center;
         padding-bottom: 4rem;
+        background-color: $colour-white;
         & h3 {
             margin: 3.25rem 0 1.9rem 0;
+            font-weight: 900;
         }
         &__list {
             width: 100%;
@@ -81,12 +88,13 @@
     }
     
     .restaurant {
-        width: 100%;
+        margin: auto;
         height: 76.5rem;
         background-color: $colour-ligthgrey;
         padding-bottom: 3.8rem;
         & h3 {
             margin-top: 3.5rem;
+            font-weight: 900;
             width: 100%;
             @media screen and (min-width: 668px)and (max-width: 1025px) {
                 margin-top: $layout-margin;
@@ -100,6 +108,7 @@
             justify-content: space-between;
         }
         @media screen and (min-width:1025px) {
+            @include center;
             max-height: 45rem;
             display: flex;
             flex-flow: row wrap;
@@ -114,6 +123,11 @@
             @media screen and (min-width: 1025px) {
                 width: 49%;
             }
+            & p{
+                font-weight: lighter;
+            }
+            
+
         }
         &__item__imgbox {
             @include img-ratio();

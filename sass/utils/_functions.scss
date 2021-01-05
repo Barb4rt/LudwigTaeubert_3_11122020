@@ -12,6 +12,6 @@
         @return lighten($colour-third, 10%);
     }
     @else {
-        @return darken($colour-ligthgrey, 60%);
+        @return darken($colour-ligthgrey, 40%);
     }
 }
