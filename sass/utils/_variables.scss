@@ -13,10 +13,10 @@ $caption-padding--letf:0.87rem;
 $font-btn: 'Roboto',
 sans-serif;
 $btn-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-$btn-hover-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+$btn-hover-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 $font-light:lighter;
 $btn-gradient:linear-gradient(350deg, #9356dc, #ff79da);
-$btn-lighten-gradient:linear-gradient(350deg, lighten(#9356dc, 1), lighten(#ff79da, 1));
+$btn-lighten-gradient:linear-gradient(350deg, lighten(#9356dc, 5), lighten(#ff79da, 5));
 $header-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 $function_shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 $font-header-menu:'Shrikhand',

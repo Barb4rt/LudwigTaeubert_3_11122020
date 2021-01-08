@@ -24,6 +24,7 @@
     }
     100% {
         opacity: 1;
+        z-index: 99;
     }
 }
 
@@ -36,7 +37,7 @@
     }
     100% {
         opacity: 0;
-        display: none;
+        
     }
 }
 

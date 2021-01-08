@@ -2,16 +2,20 @@
     padding: 0;
     background-color: $colour-ligthgrey;
     box-sizing: border-box;
+    
     @media screen and (min-width: 1025px) {
         padding: 0 10% 0 10%;
     }
     &__top__imgbox {
         width: 100%;
+        overflow: hidden;
         @media screen and (min-width: 668px)and (max-width: 1025px) {
             max-height: 35rem;
+            overflow: hidden;
         }
         @media screen and (min-width: 1025px) {
             max-height: 25rem;
+            overflow: hidden;
         }
         & img {
             @include img-ratio();
@@ -52,13 +56,15 @@
             &--right {
                 display: flex;
             font-size: 1.5em;
+            justify-content: center;
+            align-items: center;
         .light {
             position: absolute;
             z-index: 1;
             transition: opacity;
             background: linear-gradient(205deg, #9356DC, #FF79DA 75%);
             color: black;
-            background-clip: text;
+            -webkit-background-clip: text;
             &:hover {
                 opacity: 0;
             }
@@ -68,7 +74,7 @@
             &::before {
                 background: linear-gradient(205deg, #9356DC, #FF79DA 75%);
                 color: transparent;
-                background-clip: text;
+                -webkit-background-clip: text;
             }
                 
                 }
